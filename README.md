@@ -16,7 +16,7 @@ GitHub](https://github.com/ImperialCollegeLondon/imperial_latex_templates).
 
 ## Installation
 
-The templates can be used in by simply placeing the `.cls` files, and the
+The templates can be used in by simply placing the `.cls` files, and the
 `Fonts` and `Images` folders in the same folder as your `.tex` document.
 However, if you intend to use the templates repeatedly, you may wish to follow
 the [instructions for installing LaTeX
