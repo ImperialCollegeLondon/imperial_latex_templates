@@ -7,6 +7,10 @@
 % Vel (enquiries@latextypesetting.com)
 % LaTeXTypesetting.com
 %
+% For current versions and to report
+% issues, please see:
+% https://github.com/ImperialCollegeLondon/imperial_latex_templates
+%
 % © Imperial College London, 2024. This template, including logo and fonts, is 
 % for use of Imperial staff and students only for university business. All rights 
 % reserved to the copyright owners.
