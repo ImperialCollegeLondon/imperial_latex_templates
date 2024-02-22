@@ -10,6 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
             root_file: template_letter.tex
+            latexmk_use_xelatex: true
       - name: Upload Letter PDF
         uses: actions/upload-artifact@v3
         with:
@@ -19,6 +20,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
             root_file: template_poster_portrait.tex
+            latexmk_use_xelatex: true
       - name: Upload Portrait Poster PDF
         uses: actions/upload-artifact@v3
         with:
@@ -28,6 +30,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
             root_file: template_poster_landscape.tex
+            latexmk_use_xelatex: true
       - name: Upload Portrait Poster PDF
         uses: actions/upload-artifact@v3
         with:
