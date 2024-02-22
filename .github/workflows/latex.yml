@@ -1,0 +1,35 @@
+name: Build LaTeX templates
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile Letter
+        uses: xu-cheng/latex-action@v3
+        with:
+            root_file: template_letter.tex
+      - name: Upload Letter PDF
+        uses: actions/upload-artifact@v3
+        with:
+            name: PDF
+            path: template_letter.pdf
+      - name: Compile Portrait Poster
+        uses: xu-cheng/latex-action@v3
+        with:
+            root_file: template_poster_portrait.tex
+      - name: Upload Portrait Poster PDF
+        uses: actions/upload-artifact@v3
+        with:
+            name: PDF
+            path: template_poster_portrait.pdf
+      - name: Compile Landscape Poster
+        uses: xu-cheng/latex-action@v3
+        with:
+            root_file: template_poster_landscape.tex
+      - name: Upload Portrait Poster PDF
+        uses: actions/upload-artifact@v3
+        with:
+            name: PDF
+            path: template_poster_landscape.pdf
