@@ -1,0 +1,302 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Imperial College London Poster (Landscape)
+% LaTeX Template
+% Version 1.0 (February 22, 2024)
+%
+% This template was created by:
+% Vel (enquiries@latextypesetting.com)
+% LaTeXTypesetting.com
+%
+%!TEX program = xelatex
+% Note: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
+%
+% © Imperial College London, 2024. This template, including logo and fonts, is 
+% for use of Imperial staff and students only for university business. All rights 
+% reserved to the copyright owners.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	CLASS, PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	landscape, % Landscape page orientation
+	%print, % Uncomment to convert colors to CMYK for printing purposes
+	%a1papersize, % Uncomment to use an A1 paper size instead of the default A0 paper size
+]{ImperialPoster}
+
+%----------------------------------------------------------------------------------------
+%	POSTER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\postertitle{Title\\ Short and snappy, with the main message} % The poster title, can be split across multiple lines manually with \\
+
+% Contributor/author names, can be split across multiple lines manually with \\
+% Add affiliations using the \affiliation{} command
+\posterauthors{Name of contributor\affiliation{1, 2},\\ Name of contributor\affiliation{1},\\ Name of contributor\affiliation{3}}
+
+% Command to output coauthor logos to the right of the Imperial logo in the header of the poster
+% If no coauthor logos are required, remove or comment out this command
+\coauthorlogos{
+	\coauthorlogo[4cm]{Grey_16-9.pdf} % Use the optional parameter to specify a height for the logo
+	\coauthorlogo[4cm]{Grey_16-9.pdf} % Use the optional parameter to specify a height for the logo
+	\coauthorlogo{Grey_16-9.pdf} % Not specifying the optional parameter will make the logo the same height as the Imperial logo
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE POSTER LAYOUT 1
+%----------------------------------------------------------------------------------------
+
+\titlesection % Output the title section, automatically populated using the information in the POSTER INFORMATION block above
+
+\medskip % Vertical whitespace
+
+\begin{multicols}{4} % Start the four-column layout
+	
+	%----------------------------------------------------------------------------------------
+	%	FIRST COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\subsection{Subsection Title}
+	
+	Adi cum fugia qui dolo ommodit quia venisi saperat iscim qsequae nobissitat.
+	
+	Sed que perspic ipsanihit quunt aligenist re reperehendia \textcolor{ICLBlue}{apicias re pellectur sustentur?}
+	
+	Ehendios \textcolor{ICLBlue}{dolores} ni dolut acero del mint apid esto bernatendem eum \textcolor{ICLBlue}{atqui delisti opta} aliquam il id quam fuguist, eum rerferesto conserro berionectio. Alitatu saperat iscim qsequae.
+	
+	\begin{quote}
+		"Pull Quote/Subtitle. Oluptat ut in gother comnihic totatem apietur, ium audi imus vent ipsum volup ta veniscil dolut acero del mint conserro"
+	\end{quote}
+	
+	\subsection{Subsection Title}
+	
+	Adi cum fugia qui dolo ommodit quia venisi saperat iscim qsequae nobissitat.
+	
+	Sed que perspic ipsanihit quunt aligenist re reperehendia apicias re pellectur sus, tentur? 
+	
+	\begin{table}[H] % [H] forces the table to be output where it is defined in the code (it suppresses floating)
+		\caption{Experimental results.}
+		\begin{tabular}{L{0.24\linewidth} C{0.24\linewidth} R{0.24\linewidth}}
+			\toprule
+			Treatment & Quantity & Response\\
+			\midrule
+			AAA & 10mL & 0.944\\
+			AAA & 150mL & 0.527\\
+			BBB & 20mL & 0.263\\
+			BBB & 2,000mL & 0.818\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+		
+	\columnbreak % Switch to the next column
+	
+	%----------------------------------------------------------------------------------------
+	%	SECOND COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\section{Section Title}
+	
+	Equae es nobissitat hitatum estis quodit larib ustotatet etur aut exere estint eium ium expeb usantis sae maio omnis consed quam reici voluptam ipistio. Arum, se velliquosam, oms evelendici derroruptius debitis quunto
+	
+	\smalltext{Equae es nobissitat hitatum estis quodit larib ustotatet etur aut exere estint eium ium expeb usantis sae maio omnis consed quam reici voluptam ipistio. Arum, se velliquosam, oms evelendici derroruptius debitis quunto} % Use \smalltext or an enclosed \small for a block of text in a reduced font size
+	
+	\begin{figure}[H] % [H] forces the figure to be output where it is defined in the code (it suppresses floating)
+		\includegraphics[width=\linewidth]{Grey_4-3_Portrait.pdf} % Figure image
+		\caption{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie.}
+	\end{figure}
+	
+	\columnbreak % Switch to the next column
+	
+	%----------------------------------------------------------------------------------------
+	%	THIRD COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\begin{figure}[H] % [H] forces the figure to be output where it is defined in the code (it suppresses floating)
+		\includegraphics[width=\linewidth]{Grey_16-9.pdf} % Figure image
+		\caption{Figure caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie.}
+	\end{figure}
+	
+	\subsection{Subsection Title}
+	
+	Adi cum fugia qui dolo ommodit quia venisi saperat iscim qsequae nobissitat. Sed que perspic ipsanihit quunt aligenist re reperehendia, apicias re pellectur susentur? Ehendios dolores ni dolut acero del mint apid esto bernatendem eum atqui delisti opta aliquam il id quam fuguist, eum rerferesto conserro berionectio. Alitatu saperat iscim  trffeq qsequae.
+
+	Ugia susae et remolectur, tem si occaborectas reptati con net porem. Imusci cus voluptat.
+	
+	\includegraphics[width=0.49\linewidth]{Grey_16-9.pdf}\hfill\includegraphics[width=0.49\linewidth]{Grey_16-9.pdf} % Side by side images
+	
+	\begin{itemize}
+		\item Lorem ipsum
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		\item Praesent porttitor.
+	\end{itemize}
+	
+	\columnbreak % Switch to the next column
+	
+	%----------------------------------------------------------------------------------------
+	%	FOURTH COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\section{Section Title}
+	
+	\begingroup
+		\small % Reduce font size
+		Obisim qui quiae porum ea volorenis eic tem andae nus, verem expligento tecum eos quo magnihit inis sunt di dolupta tiuntem qui ipid moluptatquam idio. Itinturia vellam in none velit quat landi ium faci dolum volut as ea cus.
+
+		Am conet, ut occaerum ant eatibusdae sit, nus etur? Mincia cone verum qui dis nobitatur sequodi oriaepuda sim rempersperia nulluptatis culpario eicte illupta tenemperit isquamus natem et officilique prehent unt aut magnis volut porupta turehen ditatenis eumquamus dolorisi dipis enis vid ulpa aciur.\par
+	\endgroup
+	
+	\largepercent{95\%} % Large bold percentage figure
+	
+	Equae es nobissitat hitatum estis quodit larib ustotatet etur aut exere estint eium ium exeb usantis sae maio omnis consed quam reici*
+	
+	\smalltext{*Equae es nobissitat hitatum estis quodit laborib ustotatet e auexere estint eium ium experib usantis sae maio omnis co.} % Use \smalltext or an enclosed \small for a block of text in a reduced font size
+		
+	\boldsection{Arum alis dolum aut pe dolorestem cone verestis es si beaquib usanime eum} % Output some bold text to stand out from the body text
+	
+	\subsection{Affiliations}
+	
+	% Affiliation institutions, the first parameter is the affiliation number (matching the author list) and the second is the institution
+	\affiliationentry{1}{Department Name, Imperial College London}\\
+	\affiliationentry{2}{University Name}\\
+	\affiliationentry{3}{Institute Name}
+	
+	\subsection{Funders}
+	
+	\includegraphics[width=0.55\linewidth]{UKRI_logo.png}\hfill\includegraphics[width=0.35\linewidth]{Grey_16-9.pdf} % Side by side funder logos
+	
+%----------------------------------------------------------------------------------------
+
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE POSTER LAYOUT 2
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\titlesection % Output the title section, automatically populated using the information in the POSTER INFORMATION block above
+
+\medskip % Vertical whitespace
+
+\begin{multicols}{4} % Start the three-column layout
+	
+	%----------------------------------------------------------------------------------------
+	%	FIRST COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\subsection{Subsection Title}
+	
+	Adi cum fugia qui dolo ommodit quia venisi saperat iscim qsequae nobissitat.
+	
+	Sed que perspic ipsanihit quunt aligenist re reperehendia \textcolor{ICLBlue}{apicias re pellectur sustentur?}
+	
+	Ehendios \textcolor{ICLBlue}{dolores} ni dolut acero del mint apid esto bernatendem eum \textcolor{ICLBlue}{atqui delisti opta} aliquam il id quam fuguist, eum rerferesto conserro berionectio. Alitatu saperat iscim qsequae.
+	
+	\begin{quote}
+	"Pull Quote/Subtitle. Oluptat ut in gother comnihic totatem apietur, ium audi imus vent ipsum volup ta veniscil dolut acero del mint conserro"
+	\end{quote}
+	
+	\subsection{Subsection Title}
+	
+	Adi cum fugia qui dolo ommodit quia venisi saperat iscim qsequae nobissitat.
+	
+	Sed que perspic ipsanihit quunt aligenist re reperehendia apicias re pellectur sus, tentur? 
+	
+	\begin{table}[H] % [H] forces the table to be output where it is defined in the code (it suppresses floating)
+		\caption{Experimental results.}
+		\begin{tabular}{L{0.24\linewidth} C{0.24\linewidth} R{0.24\linewidth}}
+			\toprule
+			Treatment & Quantity & Response\\
+			\midrule
+			AAA & 10mL & 0.944\\
+			AAA & 150mL & 0.527\\
+			BBB & 20mL & 0.263\\
+			BBB & 2,000mL & 0.818\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\columnbreak % Switch to the next column
+	
+	%----------------------------------------------------------------------------------------
+	%	SECOND COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\section{Section Title}
+	
+	Equae es nobissitat hitatum estis quodit larib ustotatet etur aut exere estint eium ium expeb usantis sae maio omnis consed quam reici voluptam ipistio. Arum, se velliquosam, oms evelendici derroruptius debitis quunto. 
+	
+	\smalltext{Equae es nobissitat hitatum estis quodit larib ustotatet etur aut exere estint eium ium expeb usantis sae maio omnis consed quam reici voluptam ipistio.} % Use \smalltext or an enclosed \small for a block of text in a reduced font size
+	
+	\begin{figure}[H] % [H] forces the figure to be output where it is defined in the code (it suppresses floating)
+		\includegraphics[width=0.495\textwidth]{Grey_4-3.pdf} % Figure image
+		\parbox[b]{0.495\textwidth}{\caption{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros.}} % Caption needs to be in a parbox of the same width as the figure in order to span the same width across 2 columns
+	\end{figure}
+	
+	\columnbreak % Switch to the next column
+	
+	%----------------------------------------------------------------------------------------
+	%	THIRD COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\begin{figure}[H] % [H] forces the figure to be output where it is defined in the code (it suppresses floating)
+		\includegraphics[width=\linewidth]{Grey_16-9.pdf} % Figure image
+		\caption{Figure caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus.}
+	\end{figure}
+		
+	\columnbreak % Switch to the next column
+	
+	%----------------------------------------------------------------------------------------
+	%	FOURTH COLUMN
+	%----------------------------------------------------------------------------------------
+	
+	\section{Section Title}
+	
+	\begingroup
+		\small % Reduce font size
+		Obisim qui quiae porum ea volorenis eic tem andae nus, verem expligento tecum eos quo magnihit inis sunt di dolupta tiuntem qui ipid moluptatquam idio. Itinturia vellam in none velit quat landi ium faci dolum volut as ea cus.
+
+		Am conet, ut occaerum ant eatibusdae sit, nus etur? Mincia cone verum qui dis nobitatur sequodi oriaepuda sim rempersperia nulluptatis culpario eicte illupta tenemperit isquamus natem.\par
+	\endgroup
+	
+	\largepercent{95\%} % Large bold percentage figure
+	
+	\begin{enumerate}
+		\item Lorem ipsum
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		\item Praesent porttitor.*
+	\end{enumerate}
+	
+	\smalltext{*Equae es nobissitat hitatum estis quodit laborib ustotatet e auexere estint eium ium experib usantis sae maio omnis co.} % Use \smalltext or an enclosed \small for a block of text in a reduced font size
+		
+	\boldsection{Arum alis dolum aut pe dolorestem cone verestis es si beaquib usanime eum} % Output some bold text to stand out from the body text
+	
+	Equae es nobissitat hitatum estis quodit larib ustotatet etur aut exerem ium exeb.
+	
+	\subsection{Affiliations}
+	
+	% Affiliation institutions, the first parameter is the affiliation number (matching the author list) and the second is the institution
+	\affiliationentry{1}{Department Name, Imperial College London}\\
+	\affiliationentry{2}{University Name}\\
+	\affiliationentry{3}{Institute Name}
+	
+	\subsection{Funders}
+	
+	\includegraphics[width=0.55\linewidth]{UKRI_logo.png}\hfill\includegraphics[width=0.35\linewidth]{Grey_16-9.pdf} % Side by side funder logos
+	
+%----------------------------------------------------------------------------------------
+
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
