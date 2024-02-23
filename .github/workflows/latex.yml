@@ -1,5 +1,9 @@
 name: Build LaTeX templates
-on: [push]
+on: 
+  push:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 4 * * 1' # Run at 0400 every Monday.
 jobs:
   build_latex:
     runs-on: ubuntu-latest
