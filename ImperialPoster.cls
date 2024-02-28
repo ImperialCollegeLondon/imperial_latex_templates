@@ -101,20 +101,23 @@
 \usepackage{fontspec} % Required for specifying custom fonts
 
 \defaultfontfeatures{Ligatures=TeX} % To support LaTeX ligatures (e.g. `` and --)
-\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
+% Use system fonts if available, otherwise look in the Fonts folder.
+\IfFontExistsTF{Imperial Sans Text}{}{
+	\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
+}
 
 % The default font family
-\setmainfont{ImperialSansText}[
-	UprightFont=*-Regular.ttf,
-	BoldFont=*-Bold.ttf
+\setmainfont{Imperial Sans Text}[
+	UprightFont=*-Regular,
+	BoldFont=*-Bold
 ]
 
 % Define the other Imperial Sans font weights
-\newfontface{\ImperialSansExtraBold}{ImperialSansText-Extrabold.ttf}
-\newfontface{\ImperialSansExtraLight}{ImperialSansText-Extralight.ttf}
-\newfontface{\ImperialSansSemiBold}{ImperialSansText-Semibold.ttf}
-\newfontface{\ImperialSansMedium}{ImperialSansText-Medium.ttf}
-\newfontface{\ImperialSansLight}{ImperialSansText-Light.ttf}
+\newfontface{\ImperialSansExtraBold}{Imperial Sans Text Extrabold}
+\newfontface{\ImperialSansExtraLight}{Imperial Sans Text Extralight}
+\newfontface{\ImperialSansSemiBold}{Imperial Sans Text Semibold}
+\newfontface{\ImperialSansMedium}{Imperial Sans Text Medium}
+\newfontface{\ImperialSansLight}{Imperial Sans Text Light}
 
 % Both {\small <text>\par} and \smalltext{<text>} will have the same effect in the template, with the latter being easier to use and the former being a standard LaTeX command
 \renewcommand{\small}{%
