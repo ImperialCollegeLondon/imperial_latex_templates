@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Imperial College London Poster
 % LaTeX Class
-% Version 1.0 (February 22, 2024)
+% Version 1.1 (February 29, 2024)
 %
 % For current versions and to report
 % issues, please see:
