@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Imperial College London Letterhead
 % LaTeX Class
-% Version 1.0 (February 22, 2024)
+% Version 1.1 (February 29, 2024)
 %
 % For current versions and to report
 % issues, please see:
@@ -74,30 +74,55 @@
 \usepackage{fontspec} % Required for specifying custom fonts
 
 \defaultfontfeatures{Ligatures=TeX} % To support LaTeX ligatures (e.g. `` and --)
-\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
+% Use system fonts if available, otherwise look in the Fonts folder.
+\IfFontExistsTF{Imperial Sans Text}{
+	% The default font family
+	\setmainfont{Imperial Sans Text}[
+		UprightFont=*-Regular,
+		BoldFont=*-Bold
+	]
 
-% The default font family
-\setmainfont{ImperialSansText}[
-	UprightFont=*-Regular.ttf,
-	BoldFont=*-Bold.ttf
-]
+	% The monospace font used explicitly with \texttt{}/\ttfamily
+	\setmonofont{Imperial Sans Text}[
+		UprightFont=*-Regular,
+		BoldFont=*-Bold
+	]
 
-% The monospace font used explicitly with \texttt{}/\ttfamily
-\setmonofont{ImperialSansText}[
-	UprightFont=*-Regular.ttf,
-	BoldFont=*-Bold.ttf
-]
+	\newfontfamily{\ImperialSansMedium}{Imperial Sans Text}[
+		UprightFont=*-Medium,
+		BoldFont=*-Bold,
+	]
 
-\newfontfamily{\ImperialSansMedium}{ImperialSansText}[
-	UprightFont=*-Medium.ttf,
-	BoldFont=*-Bold.ttf,
-]
+	% Define the other Imperial Sans font weights
+	\newfontface{\ImperialSansExtraBold}{Imperial Sans Text Extrabold}
+	\newfontface{\ImperialSansExtraLight}{Imperial Sans Text Extralight}
+	\newfontface{\ImperialSansSemiBold}{Imperial Sans Text Semibold}
+	\newfontface{\ImperialSansLight}{Imperial Sans Text Light}
+}{
+	\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
+	% The default font family
+	\setmainfont{ImperialSansText}[
+		UprightFont=*-Regular.ttf,
+		BoldFont=*-Bold.ttf
+	]
 
-% Define the other Imperial Sans font weights
-\newfontface{\ImperialSansExtraBold}{ImperialSansText-Extrabold.ttf}
-\newfontface{\ImperialSansExtraLight}{ImperialSansText-Extralight.ttf}
-\newfontface{\ImperialSansSemiBold}{ImperialSansText-Semibold.ttf}
-\newfontface{\ImperialSansLight}{ImperialSansText-Light.ttf}
+	% The monospace font used explicitly with \texttt{}/\ttfamily
+	\setmonofont{ImperialSansText}[
+		UprightFont=*-Regular.ttf,
+		BoldFont=*-Bold.ttf
+	]
+
+	\newfontfamily{\ImperialSansMedium}{ImperialSansText}[
+		UprightFont=*-Medium.ttf,
+		BoldFont=*-Bold.ttf,
+	]
+
+	% Define the other Imperial Sans font weights
+	\newfontface{\ImperialSansExtraBold}{ImperialSansText-Extrabold.ttf}
+	\newfontface{\ImperialSansExtraLight}{ImperialSansText-Extralight.ttf}
+	\newfontface{\ImperialSansSemiBold}{ImperialSansText-Semibold.ttf}
+	\newfontface{\ImperialSansLight}{ImperialSansText-Light.ttf}
+}
 
 %----------------------------------------------------------------------------------------
 %	HEADERS AND FOOTERS

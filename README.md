@@ -5,7 +5,7 @@ College London. A Beamer theme for slideshows will be released soon.
 
 ## Overleaf
 
-Current versions of these templates will be made available on Overleaf.
+The [letterhead](https://www.overleaf.com/latex/templates/imperial-college-london-official-letter-template/vxqhsxfjqdmm) and [poster](https://www.overleaf.com/latex/templates/imperial-college-london-poster-template/pphqwvtdrbkp) templates are available on Overleaf.
 
 ## Download
 
