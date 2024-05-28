@@ -1,0 +1,133 @@
+% This file is for custom packages, commands and theme specifications
+
+% © Imperial College London, 2024. This template, including logo and fonts, is 
+% for use of Imperial staff and students only for university business. All rights 
+% reserved to the copyright owners.
+
+\mode<presentation>
+
+%----------------------------------------------------------------------------------------
+%	REQUIRED PACKAGES AND OTHER THEME CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+% Check whether the installed beamer class is new enough to use this template
+\makeatletter
+\@ifclasslater{beamer}{2023/05/14}{%
+	% Class is new enough, don't do anything
+}{%
+	\PackageError{Imperial College London beamer Presentation}{Installed beamer too old}{Your installed package beamer is too old to use this template. Please update to at least version 3.70.}%
+}
+\makeatother
+
+\setbeamertemplate{navigation symbols}{} % Stop default beamer navigation arrows
+
+\graphicspath{{Images/}{./}} % Specifies where to look for included images (trailing slash required)
+
+\usepackage{etoolbox} % Required for conditional logic and easily changing commands
+
+\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{\setlength{\parskip}{8pt}}{\setlength{\parskip}{10pt}} % Vertical space between paragraphs
+\makeatletter
+\newcommand{\@minipagerestore}{\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{\setlength{\parskip}{8pt}}{\setlength{\parskip}{10pt}}} % Set parskip inside minipages (which beamer uses in the columns environment)
+\makeatother
+
+\usepackage{tabto} % Required for tabbing text fixed distances
+
+\usepackage{changepage} % Required for temporarily indenting text blocks
+
+\usecolortheme{Imperial} % Use the Imperial beamer color theme
+
+\usepackage{moresize} % Required for adding additional font sizes
+
+\usepackage{pifont} % For symbols
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{
+	\setbeamersize{text margin left=3mm} % Left margin
+	\setbeamersize{text margin right=3mm} % Right margin
+}{
+	\setbeamersize{text margin left=4.18mm} % Left margin
+	\setbeamersize{text margin right=4.18mm} % Right margin
+}
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fontspec} % Required for specifying custom fonts
+
+\defaultfontfeatures{Ligatures=TeX} % To support LaTeX ligatures (e.g. `` and --)
+
+% Use system fonts if available, otherwise look in the Fonts folder.
+\IfFontExistsTF{Imperial Sans Text}{
+	% The default font family
+	\setmainfont{Imperial Sans Text}[
+		UprightFont=*-Regular,
+		BoldFont=*-Bold
+	]
+
+	% The monospace font used explicitly with \texttt{}/\ttfamily
+	\setmonofont{Imperial Sans Text}[
+		UprightFont=*-Regular,
+		BoldFont=*-Bold
+	]
+
+	\newfontfamily{\ImperialSansMedium}{Imperial Sans Text}[
+		UprightFont=*-Medium,
+		BoldFont=*-Bold,
+	]
+
+	% Define the other Imperial Sans font weights
+	\newfontface{\ImperialSansExtraBold}{Imperial Sans Text Extrabold}
+	\newfontface{\ImperialSansExtraLight}{Imperial Sans Text Extralight}
+	\newfontface{\ImperialSansSemiBold}{Imperial Sans Text Semibold}
+	\newfontface{\ImperialSansLight}{Imperial Sans Text Light}
+}{
+	\defaultfontfeatures{Path=Fonts/} % Specify the location of font files
+	
+	% The default font family
+	\setsansfont{ImperialSansText}[
+		UprightFont=*-Regular.ttf,
+		ItalicFont=*-Regular.ttf, % There is no italic variant so use the regular to suppress any warnings during compilation
+		BoldFont=*-Bold.ttf
+	]
+	
+	\newfontfamily{\ImperialSansMedium}{ImperialSansText}[
+		UprightFont=*-Medium.ttf,
+		BoldFont=*-Bold.ttf,
+	]
+	
+	% Define the other Imperial Sans font weights
+	\newfontface{\ImperialSansExtraBold}{ImperialSansText-Extrabold.ttf}
+	\newfontface{\ImperialSansExtraLight}{ImperialSansText-Extralight.ttf}
+	\newfontface{\ImperialSansSemiBold}{ImperialSansText-Semibold.ttf}
+	\newfontface{\ImperialSansLight}{ImperialSansText-Light.ttf}
+}
+
+%----------------------------------------------------------------------------------------
+%	TABLES AND FIGURES
+%----------------------------------------------------------------------------------------
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\usepackage{array} % Required for manipulating table columns
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % Define a new right-aligned paragraph column type
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Define a new left-aligned (no justification) paragraph column type
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % Define a new centered paragraph column type
+
+\setlength{\tabcolsep}{0.01\paperwidth} % Increase default padding between table columns (6pt is the default)
+
+%----------------------------------------------------------------------------------------
+%	INCLUDE OTHER THEME FILES AFTER LOADING REQUIRED PACKAGES
+%----------------------------------------------------------------------------------------
+
+% Specify the other files required for this theme
+\useinnertheme{Imperial}
+\useoutertheme{Imperial}
+
+%----------------------------------------------------------------------------------------
+
+\mode<all>
