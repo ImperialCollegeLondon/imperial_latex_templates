@@ -1,11 +1,15 @@
 # Imperial College London LaTeX templates
 
-These are the official letterhead and research poster templates for Imperial
-College London. A Beamer theme for slideshows will be released soon.
+These are the official letterhead and research poster templates, and Beamer
+theme for Imperial College London.
 
 ## Overleaf
 
-The [letterhead](https://www.overleaf.com/latex/templates/imperial-college-london-official-letter-template/vxqhsxfjqdmm) and [poster](https://www.overleaf.com/latex/templates/imperial-college-london-poster-template/pphqwvtdrbkp) templates are available on Overleaf.
+The
+[letterhead](https://www.overleaf.com/latex/templates/imperial-college-london-official-letter-template/vxqhsxfjqdmm)
+and
+[poster](https://www.overleaf.com/latex/templates/imperial-college-london-poster-template/pphqwvtdrbkp)
+templates are available on Overleaf.
 
 ## Download
 
@@ -24,12 +28,14 @@ packages](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
 
 ## Usage
 
-Make a copy of `template_letter.tex`, `template_poster_portrait.tex`, or
-`template_poster_landscape.tex` and follow the instructions in the template.
+Make a copy of `template_letter.tex`, `template_poster_portrait.tex`,
+`template_poster_landscape.tex`, or `template_presentation.tex` and follow the
+instructions in the template.
 
 ## Issues
 
-Please report any bugs in the templates [on GitHub](https://github.com/ImperialCollegeLondon/imperial_latex_templates/issues).
+Please report any bugs in the templates [on
+GitHub](https://github.com/ImperialCollegeLondon/imperial_latex_templates/issues).
 
 ## Copyright
 
