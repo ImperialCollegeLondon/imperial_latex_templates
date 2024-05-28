@@ -35,8 +35,18 @@ jobs:
         with:
             root_file: template_poster_landscape.tex
             latexmk_use_xelatex: true
-      - name: Upload Portrait Poster PDF
+      - name: Upload Landscape Poster PDF
         uses: actions/upload-artifact@v3
         with:
             name: PDF
             path: template_poster_landscape.pdf
+      - name: Compile Presentation
+        uses: xu-cheng/latex-action@v3
+        with:
+            root_file: template_presentation.tex
+            latexmk_use_xelatex: true
+      - name: Upload Presentation PDF
+        uses: actions/upload-artifact@v3
+        with:
+            name: PDF
+            path: template_presentation.pdf
