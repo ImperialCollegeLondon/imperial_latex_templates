@@ -1,0 +1,135 @@
+% This file is for elements within slides
+
+% © Imperial College London, 2024. This template, including logo and fonts, is 
+% for use of Imperial staff and students only for university business. All rights 
+% reserved to the copyright owners.
+
+\mode<presentation>
+
+%----------------------------------------------------------------------------------------
+%	FONT SETTINGS FOR SLIDE ELEMENTS
+%----------------------------------------------------------------------------------------
+
+\setbeamerfont{title}{size=\HUGE, series=\ImperialSansSemiBold} % Presentation title
+\setbeamerfont{subtitle}{size=\Huge, series=\normalfont\ImperialSansMedium} % Presentation subtitle
+\setbeamerfont{author}{series=\ImperialSansMedium} % Presentation author(s)
+\setbeamerfont{date}{series=\ImperialSansMedium} % Presentation date
+
+\setbeamerfont{frametitle}{size=\large, series=\ImperialSansSemiBold} % Frame titles
+\setbeamerfont{framesubtitle}{size=\large, series=\normalfont\ImperialSansMedium} % Frame subtitles
+
+\setbeamerfont{page number in head/foot}{size=\tiny} % Footer font size
+
+\setbeamerfont{closing slide text}{size=\HUGE, series=\ImperialSansSemiBold} % Closing slide font size and styling
+
+%----------------------------------------------------------------------------------------
+%	TITLE SLIDES
+%----------------------------------------------------------------------------------------
+
+\defbeamertemplate*{title page}{logo}[1]{
+	\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{ % 4:3 aspect ratio
+		\vspace{3mm} % Vertical whitespace (top margin)
+	}{ % 16:9 aspect ratio
+		\vspace{4.18mm} % Vertical whitespace (top margin)
+	}
+	
+	\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{ % 4:3 aspect ratio
+		\includegraphics[width=4.25cm]{#1} % Logo
+	}{ % 16:9 aspect ratio
+		\includegraphics[width=5cm]{#1} % Logo
+	}
+	
+	\vfill\vfill\vfill\vfill\vfill\vfill\vfill\vfill % Automatic vertical whitespace
+	
+	\begin{beamercolorbox}[wd=\textwidth]{title page title}
+		\usebeamerfont{title}\inserttitle\par % Title
+	\end{beamercolorbox}
+	
+	\vspace{\baselineskip} % Vertical whitespace
+	
+	\begin{beamercolorbox}[wd=\textwidth]{title page subtitle}
+		\usebeamerfont{subtitle}\insertsubtitle\par % Subtitle
+	\end{beamercolorbox}
+	
+	\vfill\vfill\vfill % Automatic vertical whitespace
+	
+	\begin{beamercolorbox}[wd=\textwidth]{author}
+		\usebeamerfont{author}\insertauthor\par % Author(s)
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[wd=\textwidth]{date}
+		\usebeamerfont{date}\insertdate\par % Date
+	\end{beamercolorbox}
+	
+	\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{ % 4:3 aspect ratio
+		\vspace{3mm} % Vertical whitespace (bottom margin)
+	}{ % 16:9 aspect ratio
+		\vspace{4.18mm} % Vertical whitespace (bottom margin)
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	CLOSING SLIDES
+%----------------------------------------------------------------------------------------
+
+\defbeamertemplate*{closing slide logo}{logo}[1]{\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{\includegraphics[width=4.25cm]{#1}}{\includegraphics[width=5cm]{#1}}} % Logo on closing slides definition
+\defbeamertemplate*{closing slide text}{text}[1]{{\usebeamerfont{closing slide text}#1\par}} % Text on closing slides definition
+
+\setbeamertemplate{closing slide}{
+	\begin{frame}[plain, s] % No footer ('plain') and vertically distributed text ('s')
+		\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{ % 4:3 aspect ratio
+			\vspace{3mm} % Vertical whitespace (top margin)
+		}{ % 16:9 aspect ratio
+			\vspace{4.18mm} % Vertical whitespace (top margin)
+		}
+	
+		\usebeamertemplate{closing slide logo} % Logo
+		
+		\vfill\vfill\vfill\vfill % Automatic vertical whitespace
+		
+		\usebeamertemplate{closing slide text} % Text
+		
+		\vfill\vfill\vfill % Automatic vertical whitespace
+		
+		\begin{beamercolorbox}[wd=\textwidth]{title page title}
+			\usebeamerfont{date}\inserttitle\par % Title
+		\end{beamercolorbox}
+		
+		\begin{beamercolorbox}[wd=\textwidth]{date}
+			\usebeamerfont{date}\insertdate\par % Date
+		\end{beamercolorbox}
+		
+		\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{ % 4:3 aspect ratio
+			\vspace{3mm} % Vertical whitespace (bottom margin)
+		}{ % 16:9 aspect ratio
+			\vspace{4.18mm} % Vertical whitespace (bottom margin)
+		}
+	\end{frame}
+}
+
+%----------------------------------------------------------------------------------------
+%	CUSTOMIZE LISTS
+%----------------------------------------------------------------------------------------
+
+% Set left indents for lists
+\settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmargini}{\labelsep}
+\settowidth{\leftmarginii}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmarginii}{\labelsep}
+\settowidth{\leftmarginiii}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmarginiii}{\labelsep}
+
+%------------------------------------------------
+
+\setbeamertemplate{enumerate item}{\color{ICLBlue}\arabic{enumi}.} % Customize the first level numbered character
+\setbeamertemplate{enumerate subitem}{\color{ICLBlue}\alph{enumii}.} % Customize the second level numbered character
+\setbeamertemplate{enumerate subsubitem}{\color{ICLBlue}\roman{enumiii}.} % Customize the third level numbered character
+
+%------------------------------------------------
+
+\setbeamertemplate{itemize item}{\color{ICLBlue}\tiny\raisebox{1pt}{\ding{108}}} % Customize the first level bullet point character
+\setbeamertemplate{itemize subitem}{\color{ICLBlue}\tiny\raisebox{1pt}{\ding{108}}} % Customize the second level bullet point character
+\setbeamertemplate{itemize subsubitem}{\color{ICLBlue}\tiny\raisebox{1pt}{\ding{108}}} % Customize the third level bullet point character
+
+%----------------------------------------------------------------------------------------
+
+\mode<all>

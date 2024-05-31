@@ -1,0 +1,49 @@
+% This file is for elements outside the main text
+
+% © Imperial College London, 2024. This template, including logo and fonts, is 
+% for use of Imperial staff and students only for university business. All rights 
+% reserved to the copyright owners.
+
+\mode<presentation>
+
+%----------------------------------------------------------------------------------------
+%	SLIDE TITLES
+%----------------------------------------------------------------------------------------
+
+\defbeamertemplate*{frametitle}{Imperial}{
+	\ifx\insertframesubtitle\@empty% If no subtitle
+		\vspace{2mm} % Vertical whitespace (top margin)
+	\else % With subtitle
+		\vspace{3.5mm} % Vertical whitespace (top margin)
+	\fi
+	\begin{beamercolorbox}[left]{frame title}%
+		\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle\\% Title
+		\ifx\insertframesubtitle\@empty% If no subtitle
+		\else % With subtitle
+			\usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}\insertframesubtitle% Subtitle
+		\fi
+	\end{beamercolorbox}
+	\vspace{-0.5mm} % Pull slide content up to the frame title
+}
+
+%----------------------------------------------------------------------------------------
+%	FOOTERS
+%----------------------------------------------------------------------------------------
+
+\defbeamertemplate{footline}{full}{
+	\expandafter\ifstrequal\expandafter{\insertaspectratio}{43}{ % 4:3 aspect ratio
+		\begin{beamercolorbox}[ht=3.18mm, dp=3.5mm]{page number in head/foot} % ht and dp specify the height and padding around the footer line
+	}{ % 16:9 aspect ratio
+		\begin{beamercolorbox}[ht=4.18mm, dp=5mm]{page number in head/foot} % ht and dp specify the height and padding around the footer line
+	}
+		\usebeamerfont{page number in head/foot}% Font styling
+		\hspace{\beamer@leftmargin}% Left margin
+		\textbf{Imperial College London}\hspace{0.5cm}\inserttitle\hfill\insertdate % Footer text
+		\hspace{\beamer@rightmargin} % Right margin
+	\end{beamercolorbox}
+}
+\setbeamertemplate{footline}[full] % Use the full footer as the default
+
+%----------------------------------------------------------------------------------------
+
+\mode<all>
