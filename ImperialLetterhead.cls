@@ -186,9 +186,9 @@
 
 % Convert colors to CMYK space if the print class option was used
 \iftoggle{print}{
-	\usepackage[usenames, svgnames, cmyk]{xcolor} % Required for defining and using custom colors
+	\usepackage[svgnames, cmyk]{xcolor} % Required for defining and using custom colors
 }{
-	\usepackage[usenames, svgnames]{xcolor} % Required for defining and using custom colors
+	\usepackage[svgnames]{xcolor} % Required for defining and using custom colors
 }
 
 \definecolor{ICLBlue}{RGB}{0, 0, 205}
