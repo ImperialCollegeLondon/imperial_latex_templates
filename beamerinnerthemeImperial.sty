@@ -13,6 +13,7 @@
 \setbeamerfont{title}{size=\HUGE, series=\ImperialSansSemiBold} % Presentation title
 \setbeamerfont{subtitle}{size=\Huge, series=\normalfont\ImperialSansMedium} % Presentation subtitle
 \setbeamerfont{author}{series=\ImperialSansMedium} % Presentation author(s)
+\setbeamerfont{inst}{size=\footnotesize, series=\ImperialSansMedium} % Presentation author institution(s)
 \setbeamerfont{date}{series=\ImperialSansMedium} % Presentation date
 
 \setbeamerfont{frametitle}{size=\large, series=\ImperialSansSemiBold} % Frame titles
@@ -55,6 +56,9 @@
 	
 	\begin{beamercolorbox}[wd=\textwidth]{author}
 		\usebeamerfont{author}\insertauthor\par % Author(s)
+	\end{beamercolorbox}
+        \begin{beamercolorbox}[wd=\textwidth]{inst}
+		\usebeamerfont{inst}\insertinstitute\par % Institution(s)
 	\end{beamercolorbox}
 	\begin{beamercolorbox}[wd=\textwidth]{date}
 		\usebeamerfont{date}\insertdate\par % Date
