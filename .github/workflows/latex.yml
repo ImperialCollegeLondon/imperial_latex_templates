@@ -4,6 +4,7 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 4 * * 1' # Run at 0400 every Monday.
+  workflow_dispatch:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
