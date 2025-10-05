@@ -17,7 +17,7 @@ jobs:
             root_file: template_letter.tex
             latexmk_use_xelatex: true
       - name: Upload Letter PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
             name: PDF
             path: template_letter.pdf
@@ -27,7 +27,7 @@ jobs:
             root_file: template_poster_portrait.tex
             latexmk_use_xelatex: true
       - name: Upload Portrait Poster PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
             name: PDF
             path: template_poster_portrait.pdf
@@ -37,7 +37,7 @@ jobs:
             root_file: template_poster_landscape.tex
             latexmk_use_xelatex: true
       - name: Upload Landscape Poster PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
             name: PDF
             path: template_poster_landscape.pdf
@@ -47,7 +47,7 @@ jobs:
             root_file: template_presentation.tex
             latexmk_use_xelatex: true
       - name: Upload Presentation PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
             name: PDF
             path: template_presentation.pdf
